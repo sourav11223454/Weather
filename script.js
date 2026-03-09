@@ -8,9 +8,23 @@ const Search = async () => {
         }
         console.log(response);
         const res = await response.json()
+        document.getElementById("homepage").style.display="none"
         console.log(res);
         const cityDetails = res
         console.log(cityDetails);
+
+        const weatherType = cityDetails.weather[0].main;
+        console.log(weatherType);
+
+        if (weatherType === "Clouds") {
+           document.querySelector(".full-content").style.backgroundImage = "url('images/cloudy.jpg')";
+        }
+        else if (weatherType === "Clear") {
+           document.querySelector(".full-content").style.backgroundImage = "url('images/sunny.jpg')";
+        }
+        else if (weatherType === "Rain") {
+          document.querySelector(".full-content").style.backgroundImage = "url('images/rain.jpg')";
+        }
         const sunrise = new Date(cityDetails.sys.sunrise * 1000)
             .toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true });
 

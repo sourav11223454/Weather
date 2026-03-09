@@ -1,37 +1,89 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-.full-content{
-    width: 100%;
+
+body {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     height: 100vh;
-    box-sizing: border-box;
-    background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20200706/pngtree-natural-sky-background-image_350642.jpg');
-    background-attachment: fixed;
-    background-size:cover;
 }
-#inputCity{
-    background: rgba(255,255,255,0.1);
+
+.full-content {
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+    background-image: url('images/ChatGPT\ Image\ Mar\ 9\,\ 2026\,\ 09_00_30\ PM.png');
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
+#inputCity {
+    background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
     border-radius: 30px;
-    border: 1px solid rgba(255,255,255,0.4);
+    border: 1px solid rgba(255, 255, 255, 0.4);
     color: white;
 }
-.contents{
-    height: 100vh;
+
+.contents {
+    min-height: 60vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     align-content: center;
     justify-content: center;
+
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: rgb(11, 11, 11);
+    padding: 40px;
+    gap: 20px;
 }
-.contents p{
+
+#output {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contents p {
     font-size: 25px;
 }
-@media (max-width:768px){
-    .contents{
+
+@media (max-width:768px) {
+    .contents {
         display: grid;
-        grid-template-columns: 2fr 2fr;
-        gap: 10;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
         font-size: 15px;
+
+        max-width: 900px;
+        width: 90%;
+        margin: auto;
+        height: 100%;
     }
+
+    #output {
+        margin: 20px;
+    }
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.card1{
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: white;
+    margin: 15px;
+    padding: 10px;
 }
